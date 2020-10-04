@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Technologies from './Technologies';
+import Details from './Details';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <h1>Kodflix for MN!</h1>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import { statement } from '@babel/template';
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <Route exact path='/' component={Technologies} />
+          <Route exact path='/:details' component={Details} />
+          <Technologies />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
