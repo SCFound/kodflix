@@ -29,7 +29,7 @@ img {
 .overlay {
   transition: bottom ease 1s;
   position: absolute;
-  bottom: -100px;
+  bottom: -10px;
   left: 0;
   width: 100%;
   background-color: grey;

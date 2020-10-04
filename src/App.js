@@ -4,7 +4,6 @@ import Technologies from './Technologies';
 import Details from './Details';
 
 import './App.css';
-import { statement } from '@babel/template';
 
 class App extends Component {
   render() {
@@ -13,8 +12,7 @@ class App extends Component {
         <div className="App">
           <Route exact path='/' component={Technologies} />
           <Route exact path='/:details' component={Details} />
-          <Technologies />
-        </div>
+        </div> 
       </Router>
     );
   }
